@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    char english[10];
+    char chinese[10];
+} Dictionary;
+
+int main() {
+    Dictionary dict[] = {
+        {"dog", "狗"},
+        {"cat", "貓"},
+        {"duck", "鴨"},
+        {"cow", "牛"},
+        {"fox", "狐"}
+    };
+    
+    int num_items = sizeof(dict) / sizeof(dict[0]);
+    char input[20];
+
+    if (scanf("%s", input) != EOF) {
+        int found = 0;
+
+        for (int i = 0; i < num_items; i++) {
+            // 是否英文
+            if (strcmp(input, dict[i].english) == 0) {
+                printf("%s\n", dict[i].chinese);
+                found = 1;
+                break;
+            }
+            // 是否中文
+            else if (strcmp(input, dict[i].chinese) == 0) {
+                printf("%s\n", dict[i].english);
+                found = 1;
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
