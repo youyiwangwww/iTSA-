@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int base, height;
+    double area;
+
+    if (scanf("%d %d", &base, &height) == 2) {
+        // 除以 2.0
+        area = (double)base * height / 2.0; 
+        printf("Triangle area:%.1f\n", area);
+    }
+
+    return 0;
+}
