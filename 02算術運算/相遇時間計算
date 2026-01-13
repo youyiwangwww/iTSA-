@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int m;
+    double mySpeed = 1.0;          
+    double friendSpeed = 30 * 2.54 / 100.0; // 英吋轉公尺
+    double relativeSpeed;
+    double time;
+
+    scanf("%d", &m);
+
+    // 相對速度
+    relativeSpeed = mySpeed - friendSpeed;
+
+    // 計算時間
+    time = m / relativeSpeed;
+
+    // 無條件進位
+    printf("%d\n", (int)ceil(time));
+
+    return 0;
+}
