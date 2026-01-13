@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int m;
+    double cost;
+
+    scanf("%d", &m);
+
+    cost = m * 0.9;
+
+    // 折扣判斷
+    if (m <= 800) {
+        cost = cost;
+    } 
+    else if (m < 1500) {
+        cost = cost * 0.9;
+    } 
+    else { 
+        cost = cost * 0.79;
+    }
+
+    printf("%.1f\n", cost);
+
+    return 0;
+}
