@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int M, N, r;
+
+    scanf("%d %d", &M, &N);
+
+    while (N != 0) {
+        r = M % N;
+        M = N;
+        N = r;
+    }
+
+    printf("%d\n", M);
+
+    return 0;
+}
