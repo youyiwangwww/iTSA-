@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int P;
+    int total;
+
+    scanf("%d", &P);
+    total = P * 100;
+
+    if (P >= 100)
+        total = total * 7 / 10;
+    else if (P >= 30)
+        total = total * 8 / 10;
+    else if (P >= 10)
+        total = total * 9 / 10;
+
+    printf("%d\n", total);
+    return 0;
+}
