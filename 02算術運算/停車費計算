@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int sh, sm, eh, em;
+    int se, sm, eh, em;
     int start, end, totalMin;
     int unit;
     int cost = 0;
 
-    scanf("%d %d", &sh, &sm);
+    scanf("%d %d", &se, &sm);
     scanf("%d %d", &eh, &em);
 
     // 轉分鐘
-    start = sh * 60 + sm;
+    start = se * 60 + sm;
     end = eh * 60 + em;
 
     totalMin = end - start;
