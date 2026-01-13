@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    int nt10, nt5, nt1;
+
+    scanf("%d", &N);
+
+    nt10 = N / 10;
+    N = N % 10;
+
+    nt5 = N / 5;
+    N = N % 5;
+
+    nt1 = N;
+
+    printf("NT10=%d\n", nt10);
+    printf("NT5=%d\n", nt5);
+    printf("NT1=%d\n", nt1);
+
+    return 0;
+}
