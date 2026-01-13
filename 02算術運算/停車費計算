@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int sh, sm, eh, em;
+    int start, end, totalMin;
+    int unit;
+    int cost = 0;
+
+    scanf("%d %d", &sh, &sm);
+    scanf("%d %d", &eh, &em);
+
+    // 轉分鐘
+    start = sh * 60 + sm;
+    end = eh * 60 + em;
+
+    totalMin = end - start;
+
+    unit = totalMin / 30;
+
+    if (unit <= 4) {
+        cost = unit * 30;
+    } 
+    else if (unit <= 8) {
+        cost = 4 * 30 + (unit - 4) * 40;
+    } 
+    else {
+        cost = 4 * 30 + 4 * 40 + (unit - 8) * 60;
+    }
+
+    printf("%d\n", cost);
+
+    return 0;
+}
