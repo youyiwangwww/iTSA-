@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int i;
+
+    scanf("%d", &n);
+
+    for (int k = 0; k < n; k++) {
+        scanf("%d", &i);
+
+        if (i > 31) {
+            printf("Value of more than 31\n");
+        } else {
+            // 計算 2 的 i 次方
+            unsigned int result = 1U << i;
+            printf("%u\n", result);
+        }
+    }
+
+    return 0;
+}
