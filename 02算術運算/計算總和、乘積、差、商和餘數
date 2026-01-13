@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int x, y;
+    
+    while (scanf("%d %d", &x, &y) != EOF) {
+        int quotient = x / y;
+        int remainder = x % y;
+
+        //餘數 >= 0
+        if (remainder < 0) {
+            if (y > 0) {
+                remainder += y;
+                quotient -= 1;
+            } else {
+                remainder -= y;
+                quotient += 1;
+            }
+        }
+
+        printf("%d+%d=%d\n", x, y, x + y);
+        printf("%d*%d=%d\n", x, y, x * y);
+        printf("%d-%d=%d\n", x, y, x - y);
+        printf("%d/%d=%d...%d\n", x, y, quotient, remainder);
+    }
+    return 0;
+}
