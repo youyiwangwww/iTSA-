@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    double w, area;
+
+    if (scanf("%d", &n) != EOF) {
+        for (int i = 0; i < n; i++) {
+            if (scanf("%lf", &w) != EOF) {
+                area = w * w;
+                //確保嚴格符合四捨五入
+                printf("%.1f\n", floor(area * 10 + 0.5) / 10.0);
+            }
+        }
+    }
+
+    return 0;
+}
