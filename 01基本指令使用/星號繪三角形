@@ -1,43 +1,68 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int type;
-    if (scanf("%d", &type) != 1) return 0;
 
-    //空心三角形
+    if (!(cin >> type)) {
+        return 0;
+    }
+
+    // 空心三角形
     if (type == 1) {
         for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 5 - i; j++) printf(" ");
+            for (int j = 1; j <= 5 - i; j++) {
+                cout << " ";
+            }
+
             if (i == 1) {
-                printf("*\n");
+                cout << "*\n";
             } 
             else if (i == 5) {
-                for (int j = 1; j <= 9; j++) printf("*");
-                printf("\n");
+                for (int j = 1; j <= 9; j++) {
+                    cout << "*";
+                }
+                cout << '\n';
             } 
             else {
-                printf("*"); //左邊界
-                for (int j = 1; j <= 2 * i - 3; j++) printf(" ");
-                printf("*\n");//右邊界
+                cout << "*";  // 左邊界
+
+                for (int j = 1; j <= 2 * i - 3; j++) {
+                    cout << " ";
+                }
+
+                cout << "*\n"; // 右邊界
             }
         }
     } 
+    // 實心三角形
     else if (type == 2) {
-        //實心三角形
         for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 5 - i; j++) printf(" ");
-            for (int j = 1; j <= 2 * i - 1; j++) printf("*");
-            printf("\n");
+            for (int j = 1; j <= 5 - i; j++) {
+                cout << " ";
+            }
+
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                cout << "*";
+            }
+
+            cout << '\n';
         }
     } 
+    // 實心倒三角形
     else if (type == 3) {
-        //實心倒三角形
         for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= i - 1; j++) printf(" ");
-            for (int j = 1; j <= 2 * (6 - i) - 1; j++) printf("*");
-            printf("\n");
+            for (int j = 1; j <= i - 1; j++) {
+                cout << " ";
+            }
+
+            for (int j = 1; j <= 2 * (6 - i) - 1; j++) {
+                cout << "*";
+            }
+
+            cout << '\n';
         }
     }
-    
+
     return 0;
 }
