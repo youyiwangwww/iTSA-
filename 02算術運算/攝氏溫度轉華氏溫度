@@ -1,14 +1,16 @@
-#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     double C, F;
 
-    scanf("%lf", &C);
+    cin >> C;
 
     // 攝氏轉華氏
     F = C * 9.0 / 5.0 + 32;
 
-    printf("%.1f\n", F);
+    cout << fixed << setprecision(1) << F << '\n';
 
     return 0;
 }
