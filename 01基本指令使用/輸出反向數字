@@ -1,15 +1,20 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int num;
 
-    while (scanf("%d", &num) != EOF) {
-        int thousands = num / 1000;          
-        int hundreds = (num / 100) % 10;     
-        int tens = (num / 10) % 10;         
-        int ones = num % 10;                
-        //注意逗號
-        printf("%d,%d,%d,%d\n", ones, tens, hundreds, thousands);
+    while (cin >> num) {
+        int thousands = num / 1000;
+        int hundreds = (num / 100) % 10;
+        int tens = (num / 10) % 10;
+        int ones = num % 10;
+
+        // 注意逗號
+        cout << ones << ","
+             << tens << ","
+             << hundreds << ","
+             << thousands << '\n';
     }
 
     return 0;
