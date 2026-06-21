@@ -1,22 +1,26 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int N;
     int nt10, nt5, nt1;
 
-    scanf("%d", &N);
+    cin >> N;
 
+    // 計算需要多少個 10 元
     nt10 = N / 10;
-    N = N % 10;
+    N %= 10;
 
+    // 計算需要多少個 5 元
     nt5 = N / 5;
-    N = N % 5;
+    N %= 5;
 
+    // 剩下的金額使用 1 元
     nt1 = N;
 
-    printf("NT10=%d\n", nt10);
-    printf("NT5=%d\n", nt5);
-    printf("NT1=%d\n", nt1);
+    cout << "NT10=" << nt10 << '\n';
+    cout << "NT5=" << nt5 << '\n';
+    cout << "NT1=" << nt1 << '\n';
 
     return 0;
 }
