@@ -1,16 +1,22 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
-    int n, x, max;
-    scanf("%d", &n);
+    int n, x, maxValue;
 
-    scanf("%d", &max);
+    cin >> n;
+
+    cin >> maxValue;
+
     for (int i = 1; i < n; i++) {
-        scanf("%d", &x);
-        if (x > max)
-            max = x;
+        cin >> x;
+
+        if (x > maxValue) {
+            maxValue = x;
+        }
     }
 
-    printf("%d\n", max);
+    cout << maxValue << '\n';
+
     return 0;
 }
