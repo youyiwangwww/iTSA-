@@ -1,27 +1,31 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int x, y;
-    
-    while (scanf("%d %d", &x, &y) != EOF) {
+
+    while (cin >> x >> y) {
         int quotient = x / y;
         int remainder = x % y;
 
-        //餘數 >= 0
+        // 確保餘數大於或等於 0
         if (remainder < 0) {
             if (y > 0) {
                 remainder += y;
                 quotient -= 1;
-            } else {
+            }
+            else {
                 remainder -= y;
                 quotient += 1;
             }
         }
 
-        printf("%d+%d=%d\n", x, y, x + y);
-        printf("%d*%d=%d\n", x, y, x * y);
-        printf("%d-%d=%d\n", x, y, x - y);
-        printf("%d/%d=%d...%d\n", x, y, quotient, remainder);
+        cout << x << "+" << y << "=" << x + y << '\n';
+        cout << x << "*" << y << "=" << x * y << '\n';
+        cout << x << "-" << y << "=" << x - y << '\n';
+        cout << x << "/" << y << "="
+             << quotient << "..." << remainder << '\n';
     }
+
     return 0;
 }
