@@ -1,14 +1,17 @@
-#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     int T, B, H;
     double area;
 
-    while (scanf("%d %d %d", &T, &B, &H) != EOF) {
+    while (cin >> T >> B >> H) {
+        // 除以 2.0，確保使用浮點數運算
+        area = static_cast<double>(T + B) * H / 2.0;
 
-        //除以 2.0 而非 2
-        area = (double)(T + B) * H / 2.0;
-        printf("Trapezoid area:%.1f\n", area);
+        cout << fixed << setprecision(1);
+        cout << "Trapezoid area:" << area << '\n';
     }
 
     return 0;
