@@ -1,10 +1,11 @@
-#include <stdio.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+using namespace std;
 
-typedef struct {
-    char english[10];
-    char chinese[10];
-} Dictionary;
+struct Dictionary {
+    string english;
+    string chinese;
+};
 
 int main() {
     Dictionary dict[] = {
@@ -14,24 +15,20 @@ int main() {
         {"cow", "牛"},
         {"fox", "狐"}
     };
-    
+
     int num_items = sizeof(dict) / sizeof(dict[0]);
-    char input[20];
+    string input;
 
-    if (scanf("%s", input) != EOF) {
-        int found = 0;
-
+    if (cin >> input) {
         for (int i = 0; i < num_items; i++) {
-            // 是否英文
-            if (strcmp(input, dict[i].english) == 0) {
-                printf("%s\n", dict[i].chinese);
-                found = 1;
+            // 輸入英文，輸出中文
+            if (input == dict[i].english) {
+                cout << dict[i].chinese << endl;
                 break;
             }
-            // 是否中文
-            else if (strcmp(input, dict[i].chinese) == 0) {
-                printf("%s\n", dict[i].english);
-                found = 1;
+            // 輸入中文，輸出英文
+            else if (input == dict[i].chinese) {
+                cout << dict[i].english << endl;
                 break;
             }
         }
