@@ -1,22 +1,23 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int a, b, c;
-    int max;
+    int maxValue;
 
-    scanf("%d %d %d", &a, &b, &c);
+    cin >> a >> b >> c;
 
-    max = a;
+    maxValue = a;
 
-    if (b > max) {
-        max = b;
+    if (b > maxValue) {
+        maxValue = b;
     }
 
-    if (c > max) {
-        max = c;
+    if (c > maxValue) {
+        maxValue = c;
     }
 
-    printf("%d\n", max);
+    cout << maxValue << '\n';
 
     return 0;
 }
