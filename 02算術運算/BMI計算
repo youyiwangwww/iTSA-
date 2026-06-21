@@ -1,16 +1,21 @@
-#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     int w, h;
     double height, bmi;
 
-    scanf("%d %d", &w, &h);
+    cin >> w >> h;
 
+    // 將身高從公分轉成公尺
     height = h / 100.0;
 
+    // BMI = 體重 ÷ 身高平方
     bmi = w / (height * height);
 
-    printf("%.2f\n", bmi);
+    // 顯示小數點後兩位
+    cout << fixed << setprecision(2) << bmi << '\n';
 
     return 0;
 }
