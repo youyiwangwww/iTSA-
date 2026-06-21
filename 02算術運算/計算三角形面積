@@ -1,1 +1,18 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
+int main() {
+    int base, height;
+    double area;
+
+    if (cin >> base >> height) {
+        // 使用 2.0 進行浮點數除法
+        area = static_cast<double>(base) * height / 2.0;
+
+        cout << fixed << setprecision(1);
+        cout << "Triangle area:" << area << '\n';
+    }
+
+    return 0;
+}
