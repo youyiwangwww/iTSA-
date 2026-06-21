@@ -1,15 +1,18 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int n;
     int x, y;
 
-    scanf("%d", &n);
+    cin >> n;
 
     for (int i = 0; i < n; i++) {
-        scanf("%d %d", &x, &y);
+        cin >> x >> y;
+
         int sum = x + y;
-        printf("%d\n", sum * sum);
+
+        cout << sum * sum << '\n';
     }
 
     return 0;
