@@ -1,12 +1,13 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int num;
     int digits[5];
 
-    scanf("%d", &num);
+    cin >> num;
 
-    //23416%10=6 23416/10=2341
+    // 23416 % 10 = 6，23416 / 10 = 2341
     for (int i = 4; i >= 0; i--) {
         digits[i] = num % 10;
         num /= 10;
@@ -14,10 +15,11 @@ int main() {
 
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < digits[i]; j++) {
-            printf("*");
+            cout << "*";
         }
-        printf("\n");
+        cout << '\n';
     }
 
     return 0;
 }
+
