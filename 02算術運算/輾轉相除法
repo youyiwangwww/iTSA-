@@ -1,17 +1,19 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int M, N, r;
 
-    scanf("%d %d", &M, &N);
+    cin >> M >> N;
 
+    // 輾轉相除法求最大公因數
     while (N != 0) {
         r = M % N;
         M = N;
         N = r;
     }
 
-    printf("%d\n", M);
+    cout << M << '\n';
 
     return 0;
 }
