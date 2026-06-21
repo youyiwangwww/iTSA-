@@ -1,10 +1,11 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int N;
     int days, hours, minutes, seconds;
 
-    scanf("%d", &N);
+    cin >> N;
 
     days = N / 86400;
     N %= 86400;
@@ -15,10 +16,10 @@ int main() {
     minutes = N / 60;
     seconds = N % 60;
 
-    printf("%d days\n", days);
-    printf("%d hours\n", hours);
-    printf("%d minutes\n", minutes);
-    printf("%d seconds\n", seconds);
+    cout << days << " days\n";
+    cout << hours << " hours\n";
+    cout << minutes << " minutes\n";
+    cout << seconds << " seconds\n";
 
     return 0;
 }
